@@ -1,0 +1,129 @@
+nav {
+  z-index: 100;
+}
+
+nav ul li::before {
+  content: none;
+}
+
+body nav {
+  width: 100%;
+  height: 3rem;
+  background: var(--black-color);
+  box-shadow: var(--shadow);
+}
+
+body > nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+nav a {
+  background: none;
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: none;
+  color: var(--white-color);
+  font-weight: 600;
+  text-decoration: none;
+  transition: none;
+  padding: 3px;
+  border-radius: 0.2rem;
+}
+
+nav a:hover {
+  box-shadow: none;
+  color: var(--background);
+  text-decoration: underline;
+}
+
+nav ul:first-child {
+  list-style-type: none;
+  margin: auto;
+  max-width: 1000px;
+  padding: 0 0.5rem;
+  overflow: visible;
+  background: var(--black-color);
+}
+
+nav ul:first-child > li {
+  display: inline-block;
+  margin: 0;
+  padding: 0.8rem;
+  position: relative;
+  float: left;
+  color: var(--white-color);
+  font-weight: 800;
+}
+
+nav ul:first-child > li:first-child {
+  padding-left: 0;
+  display: none;
+  opacity: 1;
+}
+
+/*submenu*/
+.submenu::after {
+  content: "\25BE";
+}
+
+nav ul > li > ul {
+  display: none;
+  width: auto;
+  position: absolute;
+  padding: 1rem 2.5rem;
+  margin-left: -2rem;
+  background-color: var(--white-color);
+  color: var(--black-color);
+  z-index: 2;
+  box-shadow: var(--shadow);
+  border-radius: var(--border-radius);
+  list-style: none;
+}
+
+/*submenu links*/
+nav ul > li > ul a,
+nav ul > li > ul a:hover {
+  color: var(--black-color);
+}
+
+nav ul > li > ul > li {
+  white-space: nowrap;
+  padding-bottom: 0.4rem;
+}
+
+nav ul > li:hover > ul {
+  display: block;
+}
+nav + main,
+nav + header {
+  margin-top: 3rem;
+}
+
+@media (max-width: 45em) {
+  .row {
+    flex-direction: column !important;
+  }
+
+  nav ul:first-child > li:first-child {
+    display: block;
+  }
+
+  nav ul:first-child > li:first-child:after {
+    content: "\25BE";
+  }
+
+  nav ul:first-child > li:not(:first-child) {
+    display: none;
+  }
+  nav ul:first-child:hover > li {
+    display: block;
+    float: none !important;
+  }
+
+  nav ul > li > ul {
+    width: 75%;
+    margin-left: 8%;
+  }
+}
