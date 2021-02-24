@@ -9,11 +9,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="main.css">
   <link rel="stylesheet" type="text/css" href="nav.css">
-  <script src="include.min.js"></script>
 </head>
 
 <body>
-  <include src="nav.html"></include>
+  <nav role="navigation">
+    <ul>
+      <li><a href="index.html">Hidden Menu</a></li>
+      <li><a href="index.html">This</a></li>
+      <li><a href="index.html" aria-haspopup="true" class="submenu">That</a>
+        <ul aria-label="submenu">
+          <li><a href="index.html">Long Title Item Thing</a></li>
+          <li><a href="index.html">Menu 2</a></li>
+          <li><a href="index.html">Menu 2</a></li>
+          <li><a href="index.html">Menu 2</a></li>
+          <li><a href="index.html">Menu 2</a></li>
+          <li><a href="index.html">Menu 2</a></li>
+        </ul>
+      </li>
+      <li><a href="index.html" aria-haspopup="true" class="submenu">Other</a>
+        <ul aria-label="submenu">
+          <li><a href="index.html">Long Title Item Thing</a></li>
+          <li><a href="index.html">Menu 2</a></li>
+        </ul>
+      </li>
+      <li><a href="index.html">Long Title Item Title</a></li>
+      <li><a href="index.html">Steve</a></li>
+      <li><a href="index.html">Not Steve</a></li>
+    </ul>
+  </nav>
 
   <header id="top">
     <section class="col-full">
