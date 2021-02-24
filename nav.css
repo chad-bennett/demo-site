@@ -50,9 +50,8 @@ nav ul:first-child {
 nav ul:first-child > li {
   display: inline-block;
   margin: 0;
-  padding: 0.8rem;
+  padding: 0.5rem;
   position: relative;
-  float: left;
   color: var(--white-color);
   font-weight: 800;
 }
@@ -101,7 +100,8 @@ nav + header {
   margin-top: 3rem;
 }
 
-@media (max-width: 45em) {
+@media screen and (max-width: 45em) {
+
   .row {
     flex-direction: column !important;
   }
